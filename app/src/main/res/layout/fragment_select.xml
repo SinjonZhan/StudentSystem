@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/call_locate_gray"
+        >
+
+        <Button
+            android:id="@+id/bt_start"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/bt_commit_selector"
+            android:text="开始"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/bt_start"
+            android:layout_alignTop="@id/bt_start"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="个 人 选 课"
+            android:textSize="30sp"/>
+
+
+        <Button
+            android:id="@+id/bt_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/bt_commit_selector"
+            android:text="提交"
+            />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_select_loaddata"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+
+    <HorizontalScrollView
+        android:id="@+id/hsv_select_data"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:visibility="gone"
+
+        >
+
+
+        <ListView
+            android:id="@+id/lv_fragment_select_course_data"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            android:divider="#dddddd"
+            android:dividerHeight="1dp"
+            android:focusable="true"
+            android:scrollbars="none"
+            android:smoothScrollbar="true"
+
+            />
+    </HorizontalScrollView>
+
+
+</LinearLayout>

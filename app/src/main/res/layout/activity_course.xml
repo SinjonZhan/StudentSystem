@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+         android:id="@+id/tabhost_course"
+         android:layout_width="fill_parent"
+
+         android:layout_height="fill_parent" >
+
+
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFFFF"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+
+                <fragment
+                    android:id="@+id/fragment_data"
+                    android:name="com.sinjon.studentsystem.fragment.CourseDataFragment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"/>
+
+                <fragment
+                    android:id="@+id/fragment_search"
+                    android:name="com.sinjon.studentsystem.fragment.CourseSearchFragment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"/>
+
+                <fragment
+                    android:id="@+id/fragment_select"
+                    android:name="com.sinjon.studentsystem.fragment.CourseSelectFragment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"/>
+            </FrameLayout>
+        </FrameLayout>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone"/>
+
+        　　　　 <!-- 我只是一条线 -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#a9a9a9"
+            >
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- android:background="@drawable/bk_footer" -->
+
+            <RadioButton
+                android:id="@+id/rb_data"
+                style="@style/main_tab_bottom"
+                android:layout_weight="1"
+                android:background="#ababab"
+                android:checked="true"
+                android:drawableTop="@drawable/footer_main_selector"
+                android:text="课程信息"/>
+
+            <RadioButton
+                android:id="@+id/rb_search"
+                style="@style/main_tab_bottom"
+                android:layout_weight="1"
+                android:background="#ababab"
+                android:drawableTop="@drawable/footer_search_selector"
+                android:text="课程搜索"/>
+
+
+            <RadioButton
+                android:id="@+id/rb_select"
+                style="@style/main_tab_bottom"
+                android:layout_weight="1"
+                android:background="#ababab"
+                android:drawableTop="@drawable/footer_mycenter_selector"
+                android:text="个人选课"/>
+        </RadioGroup>
+    </LinearLayout>
+
+</TabHost>

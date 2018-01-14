@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:textSize="30sp"
+        android:gravity="center"
+        android:background="@drawable/call_locate_gray"
+        android:text="课 程 信 息"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ProgressBar
+        android:id="@+id/pb_loaddata"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_data"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <HorizontalScrollView
+
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+
+            <ListView
+
+                android:scrollbars="none"
+                android:id="@+id/lv_course_data"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:divider="#dddddd"
+                android:dividerHeight="1dp"
+                android:smoothScrollbar="true"
+                />
+        </HorizontalScrollView>
+
+    </LinearLayout>
+</LinearLayout>

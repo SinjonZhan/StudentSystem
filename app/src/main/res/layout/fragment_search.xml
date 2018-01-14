@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:background="@drawable/call_locate_gray"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:hint="请输入查询信息"
+            android:singleLine="true"/>
+
+        <ImageButton
+            android:id="@+id/ib_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@android:drawable/ic_search_category_default"/>
+
+        <Button
+            android:id="@+id/bt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="查询内容"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_fragment_search_loaddata"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="找不到相关课程信息"
+        android:textColor="#beb3b3"
+        android:textSize="20sp"
+        android:visibility="gone"
+        />
+
+    <HorizontalScrollView
+        android:id="@+id/hsv_search_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:focusable="false"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+
+        <ListView
+            android:id="@+id/lv_fragment_search_course_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:divider="#dddddd"
+            android:dividerHeight="1dp"
+            android:focusable="true"
+            android:scrollbars="none"
+            android:smoothScrollbar="true"
+            />
+    </HorizontalScrollView>
+
+
+</LinearLayout>

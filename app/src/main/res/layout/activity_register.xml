@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#d5d5d5"
+                android:orientation="vertical">
+
+
+    <TableLayout
+        android:id="@+id/tl_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+
+        android:background="@drawable/call_locate_gray"
+        android:stretchColumns="1"
+        >
+
+        <TableRow android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user4"
+                />
+
+            <EditText
+                android:id="@+id/et_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:hint="用户名"
+                android:paddingLeft="5dp"
+                android:textColor="#000000"
+                android:textSize="18sp"
+
+
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="3dp"
+                android:src="@drawable/lock4"
+
+                />
+
+            <EditText
+                android:id="@+id/et_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:hint="密码"
+                android:inputType="numberPassword"
+                android:paddingLeft="5dp"
+                android:textColor="#000000"
+                android:textSize="18sp"
+
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="3dp"
+                android:src="@drawable/lock4"
+
+                />
+
+            <EditText
+
+                android:id="@+id/et_check_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:hint="确认密码"
+                android:inputType="numberPassword"
+                android:paddingLeft="5dp"
+                android:textColor="#000000"
+                android:textSize="18sp"
+
+                />
+
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tl_dialog"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="用户注册"
+        android:textColor="#000000"
+        android:textSize="45sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tl_dialog"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal"
+
+        >
+
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bt_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#000000"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_yes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bt_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="#000000"
+            android:textSize="18sp"
+
+
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
